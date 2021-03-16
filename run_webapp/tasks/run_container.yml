@@ -1,0 +1,24 @@
+- name: Run web application container (first)
+  docker_container:
+    name: web_app1
+    image: "{{image_name}}"
+    state: started
+    ports: "5000:5000"
+       
+- name: Run web application container (second)
+  docker_container:
+    name: web_app2
+    image: "{{image_name}}"
+    state: started
+    ports: "5001:5000"
+
+- name: Run web application container (third)
+  docker_container:
+    name: web_app3
+    image: "{{image_name}}"
+    state: started
+    ports: "5002:5000"
+
+ # with_items: "{{ container_names }}"
+  
+

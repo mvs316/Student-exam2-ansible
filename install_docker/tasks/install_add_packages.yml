@@ -1,0 +1,5 @@
+- name: Install additional packages
+  yum:
+    name:  yum-utils
+    state: latest
+

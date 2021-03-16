@@ -1,0 +1,10 @@
+---
+# tasks file for setup_nginx
+- name: replace template
+  include_tasks: tasks/replace_conf.yml
+- name: pull and run docker container
+  docker_container:
+    name: nginx
+    image: nginx:latest
+    state: started
+    

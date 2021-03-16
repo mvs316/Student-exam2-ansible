@@ -1,0 +1,13 @@
+---
+# tasks file for install_docker
+- name: Delete existing docker installation
+  include_tasks: tasks/remove_existing.yml
+- name: Install yum-utils package to add repository
+  include_tasks: tasks/install_add_packages.yml
+- name: Set up docker community edition repository
+  include_tasks: tasks/add_repository.yml
+- name: Install docker ce on Centos
+  include_tasks: tasks/install_docker.yml
+
+
+

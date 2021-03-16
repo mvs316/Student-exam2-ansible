@@ -1,0 +1,7 @@
+- name: Remove docker if it is installed yet
+  yum:
+    name: docker*
+    state: removed
+
+ 
+

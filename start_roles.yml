@@ -1,0 +1,8 @@
+- name: Run roles for running web app and setting nginx
+ 
+  become: true
+  hosts: servers
+
+  roles: 
+    - run_webapp
+    - setup_nginx

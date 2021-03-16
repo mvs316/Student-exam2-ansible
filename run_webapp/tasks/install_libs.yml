@@ -1,0 +1,8 @@
+- name: Install pip
+  yum:
+    name: python-pip
+    state: present
+- name:  Install required python libs
+  pip:
+    name: docker
+

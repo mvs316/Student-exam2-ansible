@@ -1,0 +1,11 @@
+- name: Install docker ce on Centos
+  yum:
+    name: docker
+    state: latest
+#  notify: docker daemon  
+- name: docker daemon
+  service:
+    name: docker
+    state: started
+    enabled: yes
+  

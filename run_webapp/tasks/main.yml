@@ -1,0 +1,12 @@
+---
+# tasks file for run_webapp
+- name: Install pip and required python libs
+  include_tasks: tasks/install_libs.yml
+
+- name: Log into DockerHub
+  include_tasks: tasks/log_to_registry.yml
+ 
+- name: Run web application containers on different ports
+  include_tasks: tasks/run_container.yml 
+  
+
