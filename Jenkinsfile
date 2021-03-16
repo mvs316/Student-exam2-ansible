@@ -4,7 +4,7 @@ node("my_agent") {
     }
 
     stage('Execute ansible playbook for deployment') {
-        ansiblePlaybook credentialsId: 'private-key-ansible', installation: 'ansible', inventory: 'myhosts.ini', playbook: 'start_roles.yml', vaultCredentialsId: 'ansible-vault'
+        ansiblePlaybook credentialsId: 'private-key-ansible', installation: 'ansible', inventory: 'myhosts.ini', playbook: 'start_roles.yml', vaultCredentialsId: 'vault-password'
     }
     
     stage('Testing') {
