@@ -9,7 +9,7 @@ node("my_agent") {
 
     
     stage('Testing') {
-        def response = httpRequest "http://localhost:5000" , validResponseCodes: '200'
+        def response = httpRequest "http://localhost"
         println('Status: '+response.status)
         println('Response: '+response.content)
     }
