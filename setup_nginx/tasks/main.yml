@@ -7,4 +7,7 @@
     name: nginx
     image: nginx:latest
     state: started
+    volumes: /etc/nginx/:/etc/nginx/
+    network_mode: host
+
     
