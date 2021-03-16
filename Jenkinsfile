@@ -3,7 +3,7 @@ node("my_agent") {
         checkout scm
     }
 
-    stage('Execute ansible playbook for deployment) {
+    stage('Execute ansible playbook for deployment') {
         ansiblePlaybook credentialsId: 'private-key-ansible', installation: 'ansible', inventory: 'myhosts.ini', playbook: 'start_roles.yml', vaultCredentialsId: 'ansible-vault'
     }
     
